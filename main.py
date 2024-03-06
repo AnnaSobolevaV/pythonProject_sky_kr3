@@ -9,7 +9,7 @@ def main():
     data = load_data(DATA_PATH)
     print(data)
     list_transactions = build_total_list(data)
-    print_list(list_transactions)
+    print(print_list(list_transactions))
 
 
 if __name__ == '__main__':

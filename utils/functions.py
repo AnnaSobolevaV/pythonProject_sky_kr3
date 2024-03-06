@@ -83,6 +83,7 @@ def print_list(list_tr):
             from_str = str_formatted(item['from'])
         to_str = str_formatted(item['to'])
         date_str = date_str_formatted(item['date'])
-        print(f'{date_str} {item['description']}')
-        print(f'{from_str} -> {to_str}')
-        print(f'{item['operationAmount']['amount']} {item['operationAmount']['currency']['name']}\n')
+    return f""" {date_str} {item['description']}
+{from_str} -> {to_str}
+{item['operationAmount']['amount']} {item['operationAmount']['currency']['name']}\n
+"""
