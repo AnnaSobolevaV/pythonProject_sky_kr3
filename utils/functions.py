@@ -67,7 +67,7 @@ def date_str_formatted(date_str):
     """
     для Даты формирует строку формата ДД.ММ.ГГГГ
     """
-    return date_str[8:10]+'.'+date_str[5:7]+'.'+date_str[:4]
+    return date_str[8:10] + '.' + date_str[5:7] + '.' + date_str[:4]
 
 
 def print_list(list_tr):
@@ -77,13 +77,14 @@ def print_list(list_tr):
     <откуда> -> <куда>
     <сумма перевода> <валюта>
     """
+    return_str = ""
     for item in list_tr:
         from_str = ""
         if 'from' in item.keys():
             from_str = str_formatted(item['from'])
         to_str = str_formatted(item['to'])
         date_str = date_str_formatted(item['date'])
-    return f""" {date_str} {item['description']}
+        return_str = return_str + f"""{date_str} {item['description']} 
 {from_str} -> {to_str}
-{item['operationAmount']['amount']} {item['operationAmount']['currency']['name']}\n
-"""
+{item['operationAmount']['amount']} {item['operationAmount']['currency']['name']}\n\n"""
+    return return_str

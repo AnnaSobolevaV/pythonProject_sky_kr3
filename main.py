@@ -7,7 +7,6 @@ DATA_PATH = "./data/operations.json"
 
 def main():
     data = load_data(DATA_PATH)
-    print(data)
     list_transactions = build_total_list(data)
     print(print_list(list_transactions))
 
